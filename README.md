@@ -1,2 +1,2 @@
 # MIMOSA
-# please contact ychen156@mgh.harvard.edu for code of MIMOSA. 
+Please contact ychen156@mgh.harvard.edu for the code of MIMOSA. 
