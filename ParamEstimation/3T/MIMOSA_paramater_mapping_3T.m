@@ -1,12 +1,11 @@
-% MEDI toolbox (http://pre.weill.cornell.edu/mri/pages/qsm.html)
 addpath('utils/')
-addpath(genpath('/autofs/cluster/berkin/yuting/MATLAB/demo/chi-separation-main/MEDI_toolbox'))
-
-%% load dictionary
-load('dict\dict_mimosa_50b1_126T2s_v2.mat');
+%% load reconstructed images
+load('../../Recon/3T/zsssl_recon_3T/recon/mimosa_R11_zsssl_tfv2_epoch20000.mat');
+%% load generated dictionary
+load('dict/dict_mimosa_50b1_126T2s_v2.mat');
 
 %% load look up table
-load('dict\ielookup_4mimosa.mat');
+load('dict/ielookup_4mimosa.mat');
 %--------------------------------------------------------------------------
 %--------------------------------------------------------------------------
 %% set qalas param 
@@ -44,8 +43,6 @@ esp_mte = param.esp_mte;
 TEs = param.TE_mte;
 nechoes = length(TEs);
 
-load('../../02_Recon/3T/zsssl_recon_3T/recon/mimosa_R11_zsssl_tfv2_epoch20000.mat');
-
 img = abs(img_zsssl);
 T1_all = zeros(size(img,1),size(img,2),size(img,3));
 T2_all = zeros(size(img,1),size(img,2),size(img,3));
@@ -58,8 +55,8 @@ IE_all = zeros(size(img,1),size(img,2),size(img,3));
 %--------------------------------------------------------------------------
 matrix_size = [size(img,1),size(img,2),size(img,3)];
 
-img_b1_load = niftiread('data\B1_map_Head_tra_fa8_20241126194221_4_Eq_1.nii');
-img_b1 = double(img_b1_load)/800;       % reference fa 800
+img_b1_load = load('../../Recon/3T/rawdata/B1_map.mat');
+% img_b1 = double(img_b1_load)/800;       % reference fa 800
 
 img_b1 = permute(img_b1, [2 1 3]); 
 
@@ -70,7 +67,7 @@ img_b1 = img_b1(:,1:end-1,9:end);
 imagesc3d2(img_b1, s(img_b1)/2, 51, [-0,-0,0], [0,2])
 imagesc3d2(img(:,:,:,1), s(img(:,:,:,1))/2, 52, [-0,-0,0], [0,2e-4])
 %% gen mask
-% using FSL BET to generate brain mask, 
+% using FSL BET to generate brain mask
 voxel_size = [1 1 1];
 mask_brain = BET(rsos(img,4),matrix_size,voxel_size,0.5,0);
 imagesc3d2( mag.*mask_brain, s(mag.*mask_brain)/2, 5, [0,0,0], [0 0.01])

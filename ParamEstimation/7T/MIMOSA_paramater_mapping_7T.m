@@ -1,4 +1,6 @@
 addpath(genpath('utils/'))
+%% load reconstructed images
+load('../../Recon/7T/zsssl_recon_7T/recon/mimosa_zsssl_tfv2_epoch20000.mat');
 %% load dict
 load('dict/dict_mimosa_TE60p4_B1_140_v1.mat');
 load('dict/ielookup_4qalas_IR750.mat');
@@ -52,13 +54,7 @@ IE_all = zeros(size(img_zsssl,1),size(img_zsssl,2),size(img_zsssl,3));
 %--------------------------------------------------------------------------
 matrix_size = [size(img,1),size(img,2),size(img,3)];
 
-img_b1_load = niftiread('data\B1_map_Head_tra_fa8_20241126194221_4_Eq_1.nii');
-img_b1 = double(img_b1_load)/800;       % reference fa 800
-
-img_b1 = permute(img_b1, [2 1 3]); 
-
-img_b1 = flip(img_b1,2); % check orientation to match the raw data
-img_b1 = imresize3(img_b1, matrix_size); %  to match img FOV and size
+img_b1 = load('../../Recon/7T/rawdata/B1_map.mat');
 
 imagesc3d2(img_b1, s(img_b1)/2 + [0 40 0], 50, [0 0 0], [0,1.5]);colormap jet
 
@@ -66,7 +62,7 @@ imagesc3d2(img_b1, s(img_b1)/2 + [0 40 0], 50, [0 0 0], [0,1.5]);colormap jet
 N = [size(img, 1) size(img, 2) size(img, 3)];
 
 %% gen mask
-% using FSL BET to generate brain mask, 
+% using FSL BET to generate brain mask
 voxel_size = [0.75 0.75 0.75];
 mask_brain = BET(rsos(img,4),matrix_size,voxel_size,0.5,0);
 imagesc3d2( mag.*mask_brain, s(mag.*mask_brain)/2, 5, [0,0,0], [0 0.01])
