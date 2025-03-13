@@ -264,6 +264,9 @@ kMask = squeeze(mask_all(slice_idx,:,:,:,:));
 % check data to remove background slices without information
 im3d = rsos(ifft3call(sq(kspace_svd(:,:,:,:,1))),4);
 imagesc3d2(sq(im3d(:,:,:,1)), s(sq(im3d(:,:,:,1)))/2, 1, [0,0,0], [-0,3e-4]), setGcf(.5)
+if ~exist('zsssl_recon_7T/data', 'dir')
+    mkdir('zsssl_recon_7T/data'); % ´´½¨ÎÄ¼þ¼Ð
+end
 % generate data slice by slice 
 cd('zsssl_recon_7T/data/')
 for ss =53:216% discard non-brain slices

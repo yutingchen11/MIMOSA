@@ -229,6 +229,9 @@ kMask = squeeze(mask_all(slice_idx,:,:,:,:));
 im3d = rsos(ifft3call(sq(kspace_svd(:,:,:,:,1))),4);
 imagesc3d2(sq(im3d(:,:,:,1)), s(sq(im3d(:,:,:,1)))/2, 1, [0,0,0], [-0,3e-4]), setGcf(.5)
 % generate data slice by slice 
+if ~exist('zsssl_recon_3T/data', 'dir')
+    mkdir('zsssl_recon_3T/data'); % ´´½¨ÎÄ¼þ¼Ð
+end
 cd('zsssl_recon_3T/data/')
 for ss =53:216% discard non-brain slices
     kspace =  squeeze(tmp(ss,:,:,:,:));
