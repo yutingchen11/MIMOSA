@@ -51,7 +51,7 @@ def get_parser():
                         help='number of repetions for the remainder mask (\Omega \ \Gamma) ')
     parser.add_argument('--transfer_learning', type=bool, default=False,
                         help='transfer learning from pretrained model')
-    parser.add_argument('--TL_path', type=str, default='/pretrained_models/ZS_SSL_1001_R11_iter5cg5_lam0p5_echoloss_Rate1_2reps_unroll8res5CG8/',
+    parser.add_argument('--TL_path', type=str, default='/pretrained_models/ZS_SSL_1126_sjc_s1_R11_lam0p5_echoloss_Rate1_2reps_unroll8res5CG8/',
                         help='path to pretrained model')                                           
     parser.add_argument('--stop_training', type=int, default=100000,
                         help='stop training if a new lowest validation loss hasnt been achieved in xx epochs')
