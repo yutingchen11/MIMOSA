@@ -11,7 +11,7 @@ addpath(genpath('utils'));
 flag.save_kspace = 1;
 flag.save_nii = 1;
 
-data_file_path='/autofs/space/marduk_003/users/yuting/20241126_rescan/zwx/mimosa/meas_MID00255_FID07134_qalas_4acq_mgre_outcenter_1iso_R6_d1_cplm_calib_v2.dat';
+data_file_path='/rawdata/meas_MID00017_FID51769_MIMOSA_1iso_R11_d1_cplm_v2.dat';
 
 [p,n,e] = fileparts(data_file_path);
 basic_file_path=fullfile(p,n);
@@ -22,7 +22,7 @@ data_unsorted = twix_obj{end}.image.unsorted();
 
 
 % Read params from seq file
-pulseq_file_path = [pwd '/MIMOSA_1iso_R6_calib' '.seq'];
+pulseq_file_path = [pwd '/MIMOSA_1iso_R11' '.seq'];
 seq=mr.Sequence();
 seq.read(pulseq_file_path);
 

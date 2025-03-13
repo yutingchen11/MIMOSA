@@ -6,7 +6,7 @@ clear; clc;
 
 addpath(genpath('utils'));
 
-data_file_path='/autofs/space/marduk_001/users/berkin/2024_11_01_bay2_mimosa_invivo/meas_MID00608_FID210370_MIMOSA_TE60_4ms_T2prep8ms_750um_R4_fov240x232x192_uniform_ACS4d.dat';
+data_file_path='/rawdata/meas_MID00608_FID210370_MIMOSA_TE60_4ms_T2prep8ms_750um_R4_fov240x232x192_uniform_ACS4d.dat';
 
 [p,n,e] = fileparts(data_file_path);
 basic_file_path=fullfile(p,n);
