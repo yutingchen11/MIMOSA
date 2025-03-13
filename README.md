@@ -1,4 +1,5 @@
 # MIMOSA
+Please run setup.m to start.
 ## 1. Pulseq Sequence
 Please reach out to ychen156@mgh.harvard.edu for the script to generate .seq file for MIMOSA.
 ## 2. Reconstrcution
