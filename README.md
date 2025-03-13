@@ -6,7 +6,7 @@ The baseline zero-shot reconstrcution code is forked from https://github.com/bya
 ### Installation
 Dependencies are given in Recon/3T/zsssl_recon_3T/environment_tf2.yml, which can be installed with``conda env create -f environment_tf2.yml``.
 ### Data
-1. The raw data of MIMOSA at R = 11.75 at 3T can be found [here]([url](https://www.dropbox.com/scl/fi/myo832a0xcuugjz8gcfyc/meas_MID00017_FID51769_MIMOSA_1iso_R11_d1_cplm_v2.dat?rlkey=gtorarrj9rup9c7n7k74l2kkz&st=gc388m7q&dl=0)).
+1. The raw data of MIMOSA at R = 11.75 at 3T can be found here[here]([url](https://www.dropbox.com/scl/fi/myo832a0xcuugjz8gcfyc/meas_MID00017_FID51769_MIMOSA_1iso_R11_d1_cplm_v2.dat?rlkey=gtorarrj9rup9c7n7k74l2kkz&st=gc388m7q&dl=0)).
 2. The raw data of MIMOSA at R = 4 at 7T can be found here.
 ### Reconstrcution Pipeline
 1. Run prepare_data_for_zsssl_recon.m
