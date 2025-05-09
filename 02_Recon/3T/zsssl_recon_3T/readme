@@ -1,0 +1,2 @@
+1. run zs_ssl_train_mask_batch_v10ms.py
+2. run zs_ssl_inference_ms.ipynb to check the loss curve and perform interference when it has converged. It loads checkpoint saved during training.
