@@ -19,4 +19,6 @@ Dependencies are given in `Recon/3T/zsssl_recon_3T/environment_tf2.yml` and can 
 ## Paramater Estimation
 1. Run `ParamEstimation/3T/gen_MIMOSA_dict_3T.m` and `ParamEstimation/7T/gen_MIMOSA_dict_7T.m` to generate the dictionary for 3T and 7T scans, respectively.
 2. Run `ParamEstimation/3T/MIMOSA_paramater_mapping_3T.m` and `ParamEstimation/7T/MIMOSA_paramater_mapping_7T.m` to perform paramater estimation process for 3T and 7T scans, respectively.
+## Copyright & License Notice
+This project is licensed for non-commercial, research use only. For other purposes, please contact ychen156@mgh.harvard.edu.
 
