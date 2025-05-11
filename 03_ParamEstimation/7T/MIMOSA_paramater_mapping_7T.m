@@ -420,7 +420,7 @@ addpath(genpath('E:\MATLAB\demo\chi-separation-main\mritools_windows-2019_4.0.6'
 
 cplx_img = img_zsssl(:,:,:,4:end);
 
-cplx_img = sqrt(abs(cplx_img)).*exp(1i*angle(cplx_img));
+
 mag_multi_echo = abs(cplx_img);
 phs_multi_echo = angle(cplx_img);
 
