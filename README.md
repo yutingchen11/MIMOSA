@@ -7,7 +7,7 @@ Please run setup.m to start.
 ## Reconstrcution
 The baseline zero-shot reconstrcution code is forked from https://github.com/byaman14/ZS-SSL & https://github.com/yohan-jun/Zero-DeepSub
 ### Installation
-Dependencies are given in `Recon/3T/zsssl_recon_3T/environment_tf2.yml` and can be installed with``conda env create -f environment_tf2.yml``.
+Dependencies are given in `02_Recon/3T/zsssl_recon_3T/environment_tf2.yml` and can be installed with``conda env create -f environment_tf2.yml``.
 ### Data
 - The raw data of MIMOSA at R = 11.75 at 3T can be downloaded [here](https://www.dropbox.com/scl/fi/myo832a0xcuugjz8gcfyc/meas_MID00017_FID51769_MIMOSA_1iso_R11_d1_cplm_v2.dat?rlkey=gtorarrj9rup9c7n7k74l2kkz&st=gc388m7q&dl=0). After downloading the raw data, put it in the folder ``02_Recon/3T/rawdata``.
 - The raw data of MIMOSA at R = 4 at 7T can be downloaded [here](https://www.dropbox.com/scl/fi/cxwcg2hrzxronrcruuz1y/meas_MID00608_FID210370_MIMOSA_TE60_4ms_T2prep8ms_750um_R4_fov240x232x192_uniform_ACS4d.dat?rlkey=vbukwdgexjgijre1iwkycxbr4&st=rrog9cks&dl=0). After downloading the raw data, put it in the folder ``02_Recon/7T/rawdata``
