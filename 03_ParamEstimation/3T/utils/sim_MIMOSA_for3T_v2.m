@@ -1,4 +1,4 @@
-function [Mz_mtx, Mxy_mtx] = sim_qalas_4acq_pd_b1_eff_T2_outc_mge_t2s_IE_d1_v2(TR, alpha_deg, esp, turbo_factor, t1_vals, t2_vals, num_reps, echo2use, TR_mte,esp_mte,TEs, t2s_vals, gap_between_readouts, time2relax_at_the_end, b1, inv_eff,pd_map )
+function [Mz_mtx, Mxy_mtx] = sim_MIMOSA_for3T_v2(TR, alpha_deg, esp, turbo_factor, t1_vals, t2_vals, num_reps, echo2use, TR_mte,esp_mte,TEs, t2s_vals, gap_between_readouts, time2relax_at_the_end, b1, inv_eff,pd_map )
 %
 % TR parameter : excludes dead time at the end of each TR ( total_TR is TR + time2relax_at_the_end )
 % v2: considering T2* decay during FLASH readout
