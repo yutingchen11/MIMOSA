@@ -35,7 +35,7 @@ t1t2_lut_prune = zeross( [length(t1t2_lut) - idx, 2] );
 
 %% load look up table
 addpath(genpath('utils/'))
-load('dict/ielookup_4qalas.mat');
+load('dict/ielookup_4mimosa.mat');
 ie_lkp = reshape((ielookup.ies_mtx),[length(t1t2_lut),1]);
 ie_lkp_prune = zeross( [length(t1t2_lut) - idx, 1] );
 %% prune
