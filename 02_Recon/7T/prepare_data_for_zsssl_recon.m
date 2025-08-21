@@ -259,7 +259,6 @@ mask_all = kspace_svd ~= 0;
 
 tmp = fftshift(ifft(ifftshift(kspace_svd),[],1))* sqrt(nx);   % send kx into image domain
 
-kMask = squeeze(mask_all(slice_idx,:,:,:,:));
 
 % check data to remove background slices without information
 im3d = rsos(ifft3call(sq(kspace_svd(:,:,:,:,1))),4);
