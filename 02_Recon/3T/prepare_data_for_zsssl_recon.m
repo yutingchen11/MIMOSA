@@ -223,7 +223,6 @@ mask_all = kspace_svd ~= 0;
 
 tmp = fftshift(ifft(ifftshift(kspace_svd),[],1))* sqrt(nx);   % send kx into image domain
 
-kMask = squeeze(mask_all(slice_idx,:,:,:,:));
 
 % check data to remove background slices without information
 im3d = rsos(ifft3call(sq(kspace_svd(:,:,:,:,1))),4);
@@ -239,4 +238,5 @@ for ss =53:216% discard non-brain slices
     mask = squeeze(mask_all(1,:,:,1,:)); % nx, ny, nz, nc, ncontrast
     filename = sprintf('mimosa_slc_%03d', ss);
     save([filename '.mat'],'kspace','sens_maps','mask')
+
 end
