@@ -264,7 +264,7 @@ tmp = fftshift(ifft(ifftshift(kspace_svd),[],1))* sqrt(nx);   % send kx into ima
 im3d = rsos(ifft3call(sq(kspace_svd(:,:,:,:,1))),4);
 imagesc3d2(sq(im3d(:,:,:,1)), s(sq(im3d(:,:,:,1)))/2, 1, [0,0,0], [-0,3e-4]), setGcf(.5)
 if ~exist('zsssl_recon_7T/data', 'dir')
-    mkdir('zsssl_recon_7T/data'); % ´´½¨ÎÄ¼þ¼Ð
+    mkdir('zsssl_recon_7T/data'); 
 end
 % generate data slice by slice 
 cd('zsssl_recon_7T/data/')
