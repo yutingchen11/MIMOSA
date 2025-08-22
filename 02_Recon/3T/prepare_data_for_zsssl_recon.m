@@ -11,7 +11,7 @@ addpath(genpath('utils'));
 flag.save_kspace = 1;
 flag.save_nii = 1;
 
-data_file_path='/rawdata/meas_MID00017_FID51769_MIMOSA_1iso_R11_d1_cplm_v2.dat';
+data_file_path='/rawdata/meas_MID00073_FID129438_mimosa_R11.dat';
 
 [p,n,e] = fileparts(data_file_path);
 basic_file_path=fullfile(p,n);
@@ -240,3 +240,4 @@ for ss =53:216% discard non-brain slices
     save([filename '.mat'],'kspace','sens_maps','mask')
 
 end
+
