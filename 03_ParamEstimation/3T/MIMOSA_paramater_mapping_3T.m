@@ -43,7 +43,9 @@ esp_mte = param.esp_mte;
 TEs = param.TE_mte;
 nechoes = length(TEs);
 
-img = abs(img_zsssl);
+img = zeros([240,224,192,9]);
+img(66:223,:,:,:) = abs(img_zsssl);% 1st dim: the slice index used when preparing data
+
 T1_all = zeros(size(img,1),size(img,2),size(img,3));
 T2_all = zeros(size(img,1),size(img,2),size(img,3));
 PD_all = zeros(size(img,1),size(img,2),size(img,3));
@@ -529,3 +531,4 @@ imagesc3d2( x_dia, s(x_dia)/2+[26 0 10], 33, [180,180,180], [0 0.1])
 imagesc3d2( x_tot, s(x_tot)/2+[26 0 10], 44, [180,180,180], [-0.1 0.1])
 %%
 save('mapping_momosa_zsssl_dict_v2.mat','T1_map','T2_map','T2s_map','PD_map','IE_map','x_para','x_dia','x_tot')
+
