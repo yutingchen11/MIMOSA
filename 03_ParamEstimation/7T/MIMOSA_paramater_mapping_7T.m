@@ -50,7 +50,7 @@ IE_all = zeros(size(img_zsssl,1),size(img_zsssl,2),size(img_zsssl,3));
 
 
 %--------------------------------------------------------------------------
-%% Load b1 map and resize to qalas, for spetial reduced B1 slices, 42, for zju prisma B1map product
+%% Load b1 map and resize to qalas
 %--------------------------------------------------------------------------
 matrix_size = [size(img,1),size(img,2),size(img,3)];
 
