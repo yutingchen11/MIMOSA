@@ -511,7 +511,7 @@ else
     % Use Chi-sepnet-R2*
     map = r2star;
 end
-Dr = 114; % This parameter is different from the original paper (Dr = 137) because the network is trained on COSMOS-reconstructed maps
+Dr = 114*3.54; % This parameter is different from the original paper (Dr = 137) because the network is trained on COSMOS-reconstructed maps
 
 resgen = true; % Determine whether to use resolution generalization pipeline or to interpolate to 1 mm isotropic resolution
 if resgen
