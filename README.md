@@ -23,7 +23,9 @@ Dependencies are given in `02_Recon/3T/zsssl_recon_3T/environment_tf2.yml` and c
 2. Run `03_ParamEstimation/3T/MIMOSA_paramater_mapping_3T.m` and `03_ParamEstimation/7T/MIMOSA_paramater_mapping_7T.m` to perform paramater estimation process for 3T and 7T scans, respectively.
 ## Cite
 If you use the MIMOSA code in your project, please cite the following paper:
-`Y. Chen, Y. Jun, A. Heydari, et al., “ MIMOSA: Multi-Parametric Imaging Using Multiple-Echoes With Optimized Simultaneous Acquisition for Highly-Efficient Quantitative MRI,” Magnetic Resonance in Medicine (2025): 1–17, https://doi.org/10.1002/mrm.70143.`
+```bash
+Y. Chen, Y. Jun, A. Heydari, et al., “ MIMOSA: Multi-Parametric Imaging Using Multiple-Echoes With Optimized Simultaneous Acquisition for Highly-Efficient Quantitative MRI,” Magnetic Resonance in Medicine (2025): 1–17, https://doi.org/10.1002/mrm.70143.`
+```
 ## Copyright & License Notice
 This project is licensed for non-commercial, research use only. For other purposes, please contact ychen156@mgh.harvard.edu.
 
