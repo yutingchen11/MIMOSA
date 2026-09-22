@@ -1,3 +1,4 @@
+% Pulseq v1.4.2 was used. For newer versions of Pulseq, `write_v141` can be used in line #377 instead to write the sequence in the v1.4.1 format and suppress compatibility warnings.
 %--------------------------------------------------------------------------
 % Define high-level parameters
 %--------------------------------------------------------------------------
