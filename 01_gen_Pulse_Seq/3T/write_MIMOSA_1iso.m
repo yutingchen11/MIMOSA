@@ -1,6 +1,8 @@
 % MIMOSA sequence
 % Feb. 21 2025, Yuting Chen
 % ychen156@mgh.harvard.edu
+% Pulseq v1.4.2 was used. For newer versions of Pulseq, `write_v141` can be used in line #389 instead to write the sequence in the v1.4.1 format and suppress compatibility warnings.
+
 
 clc; clear all; close all;
 %--------------------------------------------------------------------------
